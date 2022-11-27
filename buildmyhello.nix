@@ -1,4 +1,6 @@
-with import <nixpkgs> {}; stdenv.mkDerivation {
+with import <nixpkgs> { };
+stdenv.mkDerivation {
+
   name = "myhello";
   src = ./src;
   buildInputs = [ coreutils gcc ];

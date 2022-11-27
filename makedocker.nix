@@ -5,6 +5,6 @@
 pkgs.dockerTools.buildImage {
   name = "hello-docker";  
   config = {        
-    Cmd = "${pkgs.callPackage ./buildmyhello.nix {}}";
+    Cmd = ["${pkgs.callPackage ./buildmyhello.nix {}}/bin/hello"];
   };
 }
